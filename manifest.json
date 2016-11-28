@@ -1,0 +1,16 @@
+﻿{
+	"name": "GitHub userscript",
+	"version": "0.1.0",
+	"manifest_version": 2,
+
+	"description": "commit履歴などの日時表示をYYYY/MM/DD HH:mm:ssにする（日本の場合）",
+
+	"content_scripts": [{
+		"matches": [
+			"https://github.com/*"
+		],
+		"js": [
+			"js/change_datetime.js"
+		]
+	}]
+}
