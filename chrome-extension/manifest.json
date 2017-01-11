@@ -5,6 +5,9 @@
 
 	"description": "commit履歴などの日時表示をYYYY/MM/DD HH:mm:ssにする（日本の場合）",
 
+	"permissions": [
+		"tabs"
+	],
 	"content_scripts": [{
 		"matches": [
 			"https://github.com/*"
