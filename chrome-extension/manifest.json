@@ -3,13 +3,14 @@
 	"version": "0.1.0",
 	"manifest_version": 2,
 
-	"description": "commit履歴などの日時表示をYYYY/MM/DD HH:mm:ssにする（日本の場合）",
+	"description": "日時表示を絶対時刻化・ソースコードを<code>で括って翻訳されないようにする",
 
 	"content_scripts": [{
 		"matches": [
 			"https://github.com/*"
 		],
 		"js": [
+			"js/pre2code.js",
 			"js/change_datetime.js"
 		]
 	}]
