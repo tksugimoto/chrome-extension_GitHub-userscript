@@ -1,4 +1,4 @@
-(function () {
+{
 	"use strict";
 	const extension_id = chrome.runtime.id;
 	window.setInterval(() => {
@@ -14,4 +14,4 @@
 			span.appendChild(document.createTextNode(")"));
 		});
 	}, 500);
-})();
+}
