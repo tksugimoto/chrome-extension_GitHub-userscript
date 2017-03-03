@@ -8,13 +8,13 @@
 			const datetime_str = elem.getAttribute("datetime");
 			const datetime = new Date(datetime_str);
 			const yyyy = datetime.getFullYear();
-			const MM = datetime.getMonth() + 1;
-			const dd = datetime.getDate();
+			const MM = String(datetime.getMonth() + 1).padStart(2, "0");
+			const dd = String(datetime.getDate()).padStart(2, "0");
 			// 曜日
 			const E = dayOfWeeks[datetime.getDay()];
-			const HH = datetime.getHours();
-			const mm = datetime.getMinutes();
-			const ss = datetime.getSeconds();
+			const HH = String(datetime.getHours()).padStart(2, "0");
+			const mm = String(datetime.getMinutes()).padStart(2, "0");
+			const ss = String(datetime.getSeconds()).padStart(2, "0");
 			const span = document.createElement("span");
 			span.appendChild(document.createTextNode(`${yyyy}/${MM}/${dd}(${E}) ${HH}:${mm}:${ss}`));
 			span.appendChild(document.createTextNode(" ("));
