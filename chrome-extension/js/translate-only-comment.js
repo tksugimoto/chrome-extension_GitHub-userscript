@@ -3,6 +3,9 @@ const isComment = text => {
 	// TODO: その他コメント対応
 	if (text.trim().startsWith('//')) return true;
 	if (text.trim().startsWith('#')) return true;
+	// TODO: 複数行コメントの判定ロジック強化
+	if (text.trim().startsWith('/*')) return true;
+	if (text.trim().startsWith('*')) return true;
 	return false;
 };
 
