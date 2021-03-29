@@ -9,7 +9,13 @@ const isComment = text => {
 	return false;
 };
 
+const isDocument = elem => {
+	if (elem.querySelector('[data-path$=".md" i]')) return true;
+	return false;
+};
+
 document.querySelectorAll('.blob-code').forEach(line => {
+	if (isDocument(line)) return;
 	if (!isComment(line.innerText)) {
 		line.classList.add('notranslate');
 	}
